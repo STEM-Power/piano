@@ -1,5 +1,4 @@
 /*
-Copyright (C): 2010-2019, Shenzhen Yahboom Tech
 modified by STEM Power Limited
 load dependency
 "piano": "file:../pxt-piano"  
@@ -158,6 +157,7 @@ namespace piano {
             case enMusic.power_up: music.beginMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once); break;
             case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
         }
+      basic.pause(4000)
       pins.analogWritePin(AnalogPin.P0, 0)
     }
     
