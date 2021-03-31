@@ -171,8 +171,8 @@ namespace piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchButton(value: touch): number {
        
-        let d = value;
-        return d;
+        let c = value;
+        return c;
     }
 
     //% blockId=piano_PlayPiano block="Play Piano|tone %value"
@@ -180,108 +180,108 @@ namespace piano {
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function PlayPiano(value: number): void {
-        let e = 0;
-        let f = 0;
-        let g = 0;
+        let a = 0;
+        let b = 0;
+        let c = 0;
         let temp = 0;
         pins.i2cWriteNumber(0x50, 8, NumberFormat.UInt8BE,false);
-        e = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
-        f = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
-        g = (f << 8) | e;
+        a = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
+        b = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
+        c = (b << 8) | a;
         
         
         if (value == 1) { 
-            if ((g & temp) != 0) {
-                g = g & temp;
-            } else if (g & touch.C) {
+            if ((c & temp) != 0) {
+                c = c & temp;
+            } else if (c & touch.C) {
                 music.ringTone(131);
-            } else if (g & touch.CD) {
+            } else if (c & touch.CD) {
                 music.ringTone(139);
-            } else if (g & touch.D) {
+            } else if (c & touch.D) {
                 music.ringTone(147);
-            } else if (g & touch.DE) {
+            } else if (c & touch.DE) {
                 music.ringTone(156);
-            } else if (g & touch.E) {
+            } else if (c & touch.E) {
                 music.ringTone(165);
-            } else if (g & touch.F) {
+            } else if (c & touch.F) {
                 music.ringTone(175);
-            } else if (g & touch.FG) {
+            } else if (c & touch.FG) {
                 music.ringTone(185);
-            } else if (g & touch.G) {
+            } else if (c & touch.G) {
                 music.ringTone(196);
-            } else if (g & touch.GA) {
+            } else if (c & touch.GA) {
                 music.ringTone(208);
-            } else if (g & touch.A) {
+            } else if (c & touch.A) {
                 music.ringTone(220);
-            } else if (g & touch.AB) {
+            } else if (c & touch.AB) {
                 music.ringTone(233);
-            } else if (g & touch.B) {
+            } else if (c & touch.B) {
                 music.ringTone(247);
-            } else if (g == touch.None) {
+            } else if (c == touch.None) {
                 music.ringTone(0);
                 //pins.digitalWritePin(DigitalPin.P0, 0);
             }
         }
         else  if (value == 2) { 
-            if ((g & temp) != 0) {
-                g = g & temp;
-            } else if (g & touch.C) {
+            if ((c & temp) != 0) {
+                c = c & temp;
+            } else if (c & touch.C) {
                 music.ringTone(262);
-            } else if (g & touch.CD) {
+            } else if (c & touch.CD) {
                 music.ringTone(277);
-            } else if (g & touch.D) {
+            } else if (c & touch.D) {
                 music.ringTone(294);
-            } else if (g & touch.DE) {
+            } else if (c & touch.DE) {
                 music.ringTone(311);
-            } else if (g & touch.E) {
+            } else if (c & touch.E) {
                 music.ringTone(330);
-            } else if (g & touch.F) {
+            } else if (c & touch.F) {
                 music.ringTone(349);
-            } else if (g & touch.FG) {
+            } else if (c & touch.FG) {
                 music.ringTone(370);
-            } else if (g & touch.G) {
+            } else if (c & touch.G) {
                 music.ringTone(392);
-            } else if (g & touch.GA) {
+            } else if (c & touch.GA) {
                 music.ringTone(415);
-            } else if (g & touch.A) {
+            } else if (c & touch.A) {
                 music.ringTone(440);
-            } else if (g & touch.AB) {
+            } else if (c & touch.AB) {
                 music.ringTone(466);
-            } else if (g & touch.B) {
+            } else if (c & touch.B) {
                 music.ringTone(494);
-            } else if (g == touch.None) {
+            } else if (c == touch.None) {
                 music.ringTone(0);
                 //pins.digitalWritePin(DigitalPin.P0, 0);
             }
         }
         else  if (value == 3) { 
-            if ((g & temp) != 0) {
-                g = g & temp;
-            } else if (g & touch.C) {
+            if ((c & temp) != 0) {
+                c = c & temp;
+            } else if (c & touch.C) {
                 music.ringTone(523);
-            } else if (g & touch.CD) {
+            } else if (c & touch.CD) {
                 music.ringTone(554);
-            } else if (g & touch.D) {
+            } else if (c & touch.D) {
                 music.ringTone(587);
-            } else if (g & touch.DE) {
+            } else if (c & touch.DE) {
                 music.ringTone(622);
-            } else if (g & touch.E) {
+            } else if (c & touch.E) {
                 music.ringTone(659);
-            } else if (g & touch.F) {
+            } else if (c & touch.F) {
                 music.ringTone(698);
-            } else if (g & touch.FG) {
+            } else if (c & touch.FG) {
                 music.ringTone(740);
-            } else if (g & touch.G) {
+            } else if (c & touch.G) {
                 music.ringTone(784);
-            } else if (g & touch.GA) {
+            } else if (c & touch.GA) {
                 music.ringTone(831);
-            } else if (g & touch.A) {
+            } else if (c & touch.A) {
                 music.ringTone(880);
-            } else if (g & touch.AB) {
+            } else if (c & touch.AB) {
                 music.ringTone(932);
-            } else if (g & touch.B) {
+            } else if (c & touch.B) {
                 music.ringTone(988);
-            } else if (g == touch.None) {
+            } else if (c == touch.None) {
                 music.ringTone(0);
                 //pins.digitalWritePin(DigitalPin.P0, 0);
             }
