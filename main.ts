@@ -159,10 +159,7 @@ namespace piano {
         let b = 0;
         let c = 0;
         pins.i2cWriteNumber(0x50,0x08,NumberFormat.UInt8BE,false);
-        a = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
-        pins.i2cWriteNumber(0x50,0x09,NumberFormat.UInt8BE,false);
-        b = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
-        c = (b<<8)|a;
+        c = pins.i2cReadNumber(0x50, NumberFormat.UInt16BE, false);
         return c;
     }
     
@@ -186,10 +183,8 @@ namespace piano {
         let c = 0;
         let temp = 0;
         pins.i2cWriteNumber(0x50, 0x08, NumberFormat.UInt8BE,false);
-        a = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
-        pins.i2cWriteNumber(0x50, 0x09, NumberFormat.UInt8BE,false);
-        b = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
-        c = (b << 8) | a;
+        c = pins.i2cReadNumber(0x50, NumberFormat.UInt16BE, false);
+    
         
         
         if (value == 1) { 
