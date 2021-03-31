@@ -108,7 +108,6 @@ namespace piano {
     //% blockId=piano_RGB_Program block="RGB_Program"
     //% weight=99
     //% blockGap=10
-    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB_Program(): neopixel.Strip {
          
@@ -121,7 +120,6 @@ namespace piano {
     //% blockId=piano_RGB_Program_Close block="RGB_Program_Close"
     //% weight=98
     //% blockGap=10
-    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
     export function RGB_Program_Close(): void {
         pins.digitalWritePin(DigitalPin.P1, 0);
@@ -132,7 +130,6 @@ namespace piano {
     //% blockId=piano_Music_Handle block="Music_Handle|%index"
     //% weight=98
     //% blockGap=10
-    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Music_Handle(index: enMusic): void {
         switch (index) {
@@ -164,7 +161,6 @@ namespace piano {
     //% blockId=piano_Touch block="Music Touch return"
     //% weight=97
     //% blockGap=10
-    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function Touch(): number {
         let a = 0;
@@ -180,7 +176,6 @@ namespace piano {
     //% blockId=piano_TouchButton block="Music Button|%value"
     //% weight=96
     //% blockGap=10
-    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchButton(value: touch): number {
        
@@ -191,7 +186,6 @@ namespace piano {
     //% blockId=piano_PlayPiano block="Play Piano|tone %value"
     //% weight=95
     //% blockGap=10
-    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function PlayPiano(value: number): void {
         let a = 0;
