@@ -1,7 +1,7 @@
 {
     "name": "piano",
     "version": "0.0.1",
-    "description": "Extension for Piano V1.0.0",
+    "description": "Extension for Piano V0.0.1",
     "dependencies": {
         "core": "*",
         "radio": "*",
